@@ -35,6 +35,19 @@ public class Program {
 			System.out.println("Update!");
 		}
 		
+		//Testando Sobreposição
+		
+		Account accTS = new Account(1005, "Adriano", 1000.0);
+		accTS.withdraw(200.0);
+		System.out.println(accTS.getBalance());
+		
+		Account accTS2 = new SavingsAccount(1006, "Sabrina", 1000.0, 0.01);
+		accTS2.withdraw(200.0);
+		System.out.println(accTS2.getBalance());
+		
+		Account accTS3 = new BusinessAccount(1007, "Mateus", 1000.0, 500.0);
+		accTS3.withdraw(200.0);
+		System.out.println(accTS3.getBalance());
 	}
 
 }
