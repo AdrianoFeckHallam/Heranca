@@ -22,7 +22,7 @@ public class Program {
 		BusinessAccount acc4 = (BusinessAccount)acc2;
 		acc4.loan(100.0);
 		
-		//BusinessAccount acc5 = (BusinessAccount)acc3;
+		// BusinessAccount acc5 = (BusinessAccount)acc3;
 		if(acc3 instanceof BusinessAccount) {
 			BusinessAccount acc5 = (BusinessAccount)acc3;
 			acc5.loan(200.0);
@@ -35,7 +35,7 @@ public class Program {
 			System.out.println("Update!");
 		}
 		
-		//Testando Sobreposição
+		// Testando Sobreposição
 		
 		Account accTS = new Account(1005, "Adriano", 1000.0);
 		accTS.withdraw(200.0);
@@ -48,6 +48,18 @@ public class Program {
 		Account accTS3 = new BusinessAccount(1007, "Mateus", 1000.0, 500.0);
 		accTS3.withdraw(200.0);
 		System.out.println(accTS3.getBalance());
+		
+		// Polimorfismo
+		
+		Account x = new Account(1008, "Natiele", 1000.0);
+		Account y = new SavingsAccount(1009, "Bruna", 1000.0, 0.01);
+		
+		x.withdraw(50.0);
+		y.withdraw(50.0);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
+		
 	}
 
 }
